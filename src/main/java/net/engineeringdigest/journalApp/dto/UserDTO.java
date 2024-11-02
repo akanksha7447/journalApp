@@ -19,4 +19,5 @@ public class UserDTO {
     private boolean sentimentAnalysis;
     @NotEmpty
     private String password;
+    String name;
 }
