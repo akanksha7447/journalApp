@@ -1,28 +1,28 @@
 weather:
   api:
-    key: ${WEATHER_API_KEY}
+    key: "your-openweathermap-api-key"
 spring:
   main:
     allow-circular-references: true
   server:
-    port: ${SERVER_PORT}
+    port: 8080
     servlet:
       context-path: /journal
   redis:
     data:
-      host: ${REDIS_HOST}
+      host: "localhost"
       port: 15641
-      password: ${REDIS_PASSWORD}
+      password: "your-redis-password"
   data:
     mongodb:
-      uri: ${MONGODB_URI}
+      uri: "mongodb://localhost:27017"
       database: journaldb
       auto-index-creation: true
   mail:
     host: smtp.gmail.com
     port: 587
-    username: ${JAVA_EMAIL}
-    password: ${JAVA_EMAIL_PASSWORD}
+    username: "your-email@gmail.com"
+    password: "your-email@gmail.com"
     properties:
       mail:
         smtp:
@@ -30,7 +30,7 @@ spring:
           starttls:
             enable: true
   kafka:
-    bootstrap-servers: ${KAFKA_SERVERS}
+    bootstrap-servers: "localhost:9092"
     producer:
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer

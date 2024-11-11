@@ -19,4 +19,36 @@ public class UserDTO {
     private boolean sentimentAnalysis;
     @NotEmpty
     private String password;
+
+    public @NotEmpty String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(@NotEmpty String userName) {
+        this.userName = userName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public boolean isSentimentAnalysis() {
+        return sentimentAnalysis;
+    }
+
+    public void setSentimentAnalysis(boolean sentimentAnalysis) {
+        this.sentimentAnalysis = sentimentAnalysis;
+    }
+
+    public @NotEmpty String getPassword() {
+        return password;
+    }
+
+    public void setPassword(@NotEmpty String password) {
+        this.password = password;
+    }
 }
